@@ -1,4 +1,4 @@
-# 2529. Maximum Count of Positive Integer and Negative Integer
+# 2529. [Maximum Count of Positive Integer and Negative Integer](https://leetcode.com/contest/weekly-contest-327/problems/maximum-count-of-positive-integer-and-negative-integer/)
 
 Given an array `nums` sorted in non-decreasing order, return the maximum between the number of positive integers and the number of negative integers.
 

@@ -1,5 +1,3 @@
-// https://leetcode.com/contest/weekly-contest-327/problems/maximum-count-of-positive-integer-and-negative-integer/
-
 #include <iostream>
 #include <vector>
 #include <algorithm>

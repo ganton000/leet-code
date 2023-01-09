@@ -1,5 +1,3 @@
-# https://leetcode.com/problems/valid-sudoku/
-
 from typing import List
 
 def isValidSudoku(self, board: List[List[str]]) -> bool:

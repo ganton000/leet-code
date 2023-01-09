@@ -1,5 +1,4 @@
-// https://leetcode.com/contest/weekly-contest-327/problems/maximum-count-of-positive-integer-and-negative-integer/
-var maximumCount = function (nums) {
+function maximumCount(nums) {
     var pos = 0;
     var neg = 0;
     for (var _i = 0, nums_1 = nums; _i < nums_1.length; _i++) {
@@ -10,7 +9,8 @@ var maximumCount = function (nums) {
             neg++;
     }
     return Math.max(pos, neg);
-};
+}
+;
 function main() {
     var nums = [-3, -2, -1, 0, 0, 1, 2];
     var nums1 = [5, 20, 66, 1314];

@@ -1,7 +1,4 @@
-// https://leetcode.com/contest/weekly-contest-327/problems/maximum-count-of-positive-integer-and-negative-integer/
-
-
-const maximumCount = (nums: number[]): number => {
+function maximumCount (nums: number[]): number {
 	let pos = 0;
 	let neg = 0;
 
@@ -14,7 +11,7 @@ const maximumCount = (nums: number[]): number => {
 };
 
 
-function main() {
+function main(): void {
 
 	const nums: number[] = [-3,-2,-1,0,0,1,2];
 	const nums1: number[] = [5,20,66,1314];

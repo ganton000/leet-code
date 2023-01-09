@@ -1,6 +1,3 @@
-# https://leetcode.com/contest/weekly-contest-327/problems/maximum-count-of-positive-integer-and-negative-integer/
-
-
 from typing import List
 
 def maximumCount(nums: List[int]) -> int:
