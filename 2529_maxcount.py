@@ -18,3 +18,9 @@ if __name__ == "__main__":
 	maximumCount(nums) # 4
 	nums = [-2,-1,-1,1,2,3]
 	maximumCount(nums) # 3
+
+
+'''
+Time Complexity: O(n)
+Space Complexity: O(n)
+'''
