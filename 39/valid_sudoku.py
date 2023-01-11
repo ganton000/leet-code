@@ -1,5 +1,15 @@
 from typing import List
 
+def transform_array_to_str(arr: iter[str]):
+	return "".join(arr).replace(".","")
+
+def remove_value(value: str, possible_values: List[str]):
+	try:
+		possible_values.remove(value)
+		return True
+	except ValueError:
+		return False
+
 def check_3_by_3(board: List[List[str]]) -> bool:
 	for i in range(3):
 		for j in range(3):
@@ -13,16 +23,6 @@ def check_3_by_3(board: List[List[str]]) -> bool:
 				return False
 
 	return True
-
-def transform_array_to_str(arr: List[str]):
-	return "".join(arr).replace(".","")
-
-def remove_value(value: str, possible_values: List[str]):
-	try:
-		possible_values.remove(value)
-		return True
-	except ValueError:
-		return False
 
 def check_rows(board: List[List[str]]) -> bool:
 	for row in board:
