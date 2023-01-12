@@ -28,13 +28,18 @@ def isValidSudoku(board: List[List[str]]) -> bool:
 			if (9-sub_board.count(".")) != (len(set(sub_board))-1):
 				return False
 
+	col1, col2, col3, col4, col5, col6, col7, col8, col9 = col1.replace(",",""), col2.replace(".",""), col3.replace(".",""), col4.replace(".",""), col5.replace(".",""), col6.replace(".",""), col7.replace(".",""), col8.replace(".",""), col9.replace(".","")
+
 	#check cols
-	if ((9-col1.count(".")) != (len(set(col1))-1)) | ((9-col2.count(".")) != (len(set(col2))-1)) | \
-		((9-col3.count(".")) != (len(set(col3))-1)) | ((9-col4.count(".")) != (len(set(col4))-1)) | \
-		((9-col5.count(".")) != (len(set(col5))-1)) | ((9-col6.count(".")) != (len(set(col6))-1)) | \
-		((9-col7.count(".")) != (len(set(col7))-1)) | ((9-col8.count(".")) != (len(set(col8))-1)) | \
-		((9-col9.count(".")) != (len(set(col9))-1)):
+	if len(col1) != len(set(col1)) | len(col2) != len(set(col2)) | len(col3) != len(set(col3)) | len(col4) != len(set(col4)) | (len(col5) != len(set(col5))) | len(col6) != len(set(col6)) | len(col7) != len(set(col7)) | len(col8) != len(set(col8)) | len(col9) != len(set(col9)):
 		return False
+
+	#if ((9-col1.count(".")) != (len(set(col1))-1)) | ((9-col2.count(".")) != (len(set(col2))-1)) | \
+	#	((9-col3.count(".")) != (len(set(col3))-1)) | ((9-col4.count(".")) != (len(set(col4))-1)) | \
+	#	((9-col5.count(".")) != (len(set(col5))-1)) | ((9-col6.count(".")) != (len(set(col6))-1)) | \
+	#	((9-col7.count(".")) != (len(set(col7))-1)) | ((9-col8.count(".")) != (len(set(col8))-1)) | \
+	#	((9-col9.count(".")) != (len(set(col9))-1)):
+	#	return False
 
 	return True
 
@@ -79,9 +84,35 @@ if __name__ == "__main__":
 		[".","9",".",".",".",".",".",".","7"]
 	]
 
-	print(isValidSudoku(board))
-	print(isValidSudoku(board2))
-	print(isValidSudoku(false_board))
+	true_board = [
+		["5","3",".",".","7",".",".",".","."],
+		["6",".",".","1","9","5",".",".","."],
+		[".","9","8",".",".",".",".","6","."],
+		["8",".",".",".","6",".",".",".","3"],
+		["4",".",".","8",".","3",".",".","1"],
+		["7",".",".",".","2",".",".",".","6"],
+		[".","6",".",".",".",".","2","8","."],
+		[".",".",".","4","1","9",".",".","5"],
+		[".",".",".",".","8",".",".","7","9"]
+	]
+
+	board3 = [
+		[".",".","4",".",".",".","6","3","."],
+		[".",".",".",".",".",".",".",".","."],
+		["5",".",".",".",".",".",".","9","."],
+		[".",".",".","5","6",".",".",".","."],
+		["4",".","3",".",".",".",".",".","1"],
+		[".",".",".","7",".",".",".",".","."],
+		[".",".",".","5",".",".",".",".","."],
+		[".",".",".",".",".",".",".",".","."],
+		[".",".",".",".",".",".",".",".","."]
+	]
+
+	print(isValidSudoku(board)) #true
+	print(isValidSudoku(board2)) #false
+	print(isValidSudoku(false_board)) #false
+	print(isValidSudoku(true_board)) #true
+	print(isValidSudoku(board3)) #false
 
 '''
 Time Complexity: O(n^2)

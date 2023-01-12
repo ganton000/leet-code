@@ -1,3 +1,5 @@
+export {}
+
 function maximumCount (nums: number[]): number {
 	let pos = 0;
 	let neg = 0;
