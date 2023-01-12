@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": ["es2015"],
+    "module": "esnext",
+    "rootDir": "./",
+    "moduleResolution": "node",
+    "strict": true,
+    "noImplicitAny": true,
+    "allowJs": true,
+    // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
+
+    // "types": [],                                      /* Specify type package names to be included without being referenced in a source file. */
+  }
+}
