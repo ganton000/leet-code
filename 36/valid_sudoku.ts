@@ -1,13 +1,30 @@
 export {}
 
 const createSetArray = (length: number) => Array(length).fill(0).map(_ => new Set()) as Array<Set<string>>;
+const createSubBoard = (i: number, j: number): number => 3 * Math.floor(j/3) + Math.floor(i/3);
 
 function isValidSudoku(board: string[][]): Boolean {
-	let rows: string[] = [];
-	let cols: string[] = [];
-	let sub_board: string[] = [];
+	let rows: Array<Set<string>> = createSetArray(board.length);
+	let cols: Array<Set<string>> = createSetArray(board.length);
+	let sub_boards: Array<Set<string>> = createSetArray(board.length);
 
-	console.log(createSetArray(board.length));
+	for (let i=0; i< board.length; i++) {
+		for(let j=0; j< board[0].length; j++) {
+			let cell: string = board[i][j];
+
+			if (cell === ".") continue;
+
+			let sub_board = createSubBoard(i,j);
+
+			if (rows[i].has(cell) || cols[j].has(cell) || sub_boards[sub_board].has(cell)) {
+				return false;
+			} else {
+				rows[i].add(cell);
+				cols[j].add(cell);
+				sub_boards[sub_board].add(cell);
+			}
+		}
+	}
 
 	return true
 }
